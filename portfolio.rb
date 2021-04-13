@@ -33,8 +33,14 @@ class Portfolio
     period_return = profit / starting_value
     {
       Profit: profit.round(2),
-      
+      Anualized_return: anualized_return(start_date, end_date, period_return)
     }
   end
 
+  def anualized_return(start_date, end_date, period_return)
+    period_in_days = (Date.strptime(end_date, "%Y-%m-%d") - Date.strptime(start_date, "%Y-%m-%d")).to_i
+    number_of_years = (365/period_in_days.to_f)
+    
+    return ((1 + period_return)**(number_of_years) - 1).round(5)
+  end
 end
