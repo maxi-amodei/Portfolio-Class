@@ -44,3 +44,11 @@ class Portfolio
     return ((1 + period_return)**(number_of_years) - 1).round(5)
   end
 end
+
+
+testing = Portfolio.new({"AAPL" => 2, "AMZN" => 2})
+testing.add_stock("NFLX", 2)
+
+p testing.profit("2020-05-09  ", "2021-04-09")
+
+# ==> {:Profit=>2335.63, :Anualized_return=>0.447}
