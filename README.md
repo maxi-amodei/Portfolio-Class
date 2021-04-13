@@ -24,6 +24,7 @@ APIRequest.is_ticker_available?("AMZN")
 APIRequest.is_ticker_available?("ANDB") ==> "Ticker incorrect or not exists"
 
 Example: Amazon Stock
+
 It has a price method tha returns the closing price in USD of the stock for the string date that was passed:
 Amazon Stock
 AMZN = Stock.New("AMZN")
@@ -38,7 +39,7 @@ Has a collection of stocks in the form of a hash with corresponding ticker and q
 For simplification purpuses we asume that portfolio composition does not change between dates
 This means that we asumme no trades. This is to keep it a simple exercise and avoid keeping track of the dates the trades were made, compute diferent position values for each stock, which would result in a diferent return for the same stock, bought on different days
 
-So, portfolio variations in profit will be calculated with the composition that the user sets at the moment of initializing the Class (User can also change composition with add or remove methods) but assuming that the cost of every stock corresponds to the start date passes in profit method:
+So, portfolio variations in profit will be calculated with the composition that the user sets at the moment of initializing the Class (User can also change composition with add or remove methods) but assuming that the cost of every stock corresponds to the start date passed in profit method:
 
 Example:
 my_portfolio = Portfolio.new({"AAPL" => 2, "AMZN" => 2})
