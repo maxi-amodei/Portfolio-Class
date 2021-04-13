@@ -1,4 +1,4 @@
-
+require_relative 'API-service'
 
 class Stock
   attr_reader :ticker
