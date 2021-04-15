@@ -9,7 +9,7 @@ Assume each Stock has a "Price" method that receives a date and returns its pric
 In this mini project we are going to use https://twelvedata.com/ free API to retrieve Stock prices. There is a API-service module to handle the connection.
 
 ## Stock class:
-We initilize a Stocke with its corresponding ticker (symbol for identifying stocks)
+We initilize a Stock with its corresponding ticker (symbol for identifying stocks)
 If not sure about tickers availbale, you look them in google and the check if available with API-service module:
 Example:
 APIRequest.is_ticker_available?("AMZN") 
