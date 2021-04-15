@@ -37,9 +37,9 @@ If date is not a working weekday it delivers closing price for previous date.
 ## Portfolio Class:
 Has a collection of stocks in the form of a hash with corresponding ticker and quantities
 For simplification purpuses we asume that portfolio composition does not change between dates
-This means that we asumme no trades. This is to keep it a simple exercise and avoid keeping track of the dates the trades were made, compute diferent position values for each stock, which would result in a diferent return for the same stock, bought on different days
+This means that we asumme no trades between dates. This is to keep it a simple exercise and avoid saving the dates each trade was made, to not compute diferent position values for each stock, and keeping annualized returns straightforward.
 
-So, portfolio variations in profit will be calculated with the composition that the user sets at the moment of initializing the Class (User can also change composition with add or remove methods) but assuming that the cost of every stock corresponds to the start date passed in profit method:
+So, portfolio variations in profit will be calculated with the stocksthat the user sets at the moment of initializing the Class (User can also change composition with add or remove methods) but assuming that the cost of every stock corresponds to the start_date passed in profit method:
 
 ## Example:
 my_portfolio = Portfolio.new({"AAPL" => 2, "AMZN" => 2})
